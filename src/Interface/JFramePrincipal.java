@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Interface;
-
+import Interface.JFrameSobre;
 /**
  *
  * @author tomast1337
@@ -36,8 +36,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jMenu = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        jMenuCadastro = new javax.swing.JMenu();
+        jMenuItemCliente = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jMenuItemProduto = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem = new javax.swing.JMenuItem();
+        jMenuSobre = new javax.swing.JMenu();
+        jMenuItemSobre = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,6 +91,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jPanelEstatisticasLayout.setVerticalGroup(
             jPanelEstatisticasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelEstatisticasLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,11 +108,32 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jMenu.setFont(new java.awt.Font("sansserif", 0, 14)); // NOI18N
 
-        jMenu3.setText("Cadastrar");
-        jMenu.add(jMenu3);
+        jMenuCadastro.setText("Cadastrar");
 
-        jMenu4.setText("Sobre");
-        jMenu.add(jMenu4);
+        jMenuItemCliente.setText("Cliente");
+        jMenuCadastro.add(jMenuItemCliente);
+        jMenuCadastro.add(jSeparator1);
+
+        jMenuItemProduto.setText("Produto");
+        jMenuCadastro.add(jMenuItemProduto);
+        jMenuCadastro.add(jSeparator2);
+
+        jMenuItem.setText("jMenuItem3");
+        jMenuCadastro.add(jMenuItem);
+
+        jMenu.add(jMenuCadastro);
+
+        jMenuSobre.setText("Sobre");
+
+        jMenuItemSobre.setText("Sobre");
+        jMenuItemSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemSobreActionPerformed(evt);
+            }
+        });
+        jMenuSobre.add(jMenuItemSobre);
+
+        jMenu.add(jMenuSobre);
 
         jMenu5.setText("Sair");
         jMenu.add(jMenu5);
@@ -128,6 +156,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSobreActionPerformed
+        System.out.println("Abrindo from sobre");
+        JFrameSobre sobre = new JFrameSobre();
+        sobre.setVisible(true);
+    }//GEN-LAST:event_jMenuItemSobreActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,10 +203,16 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenu;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItem;
+    private javax.swing.JMenuItem jMenuItemCliente;
+    private javax.swing.JMenuItem jMenuItemProduto;
+    private javax.swing.JMenuItem jMenuItemSobre;
+    private javax.swing.JMenu jMenuSobre;
     private javax.swing.JPanel jPanelEstatisticas;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
