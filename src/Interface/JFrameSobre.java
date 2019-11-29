@@ -48,7 +48,7 @@ public class JFrameSobre extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 689, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,7 +86,7 @@ public class JFrameSobre extends javax.swing.JFrame {
                         .addComponent(jButtonGit1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(415, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,21 +125,19 @@ public class JFrameSobre extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    private void jButtonProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProjetoActionPerformed
+    void abrirLink(String URL){
         try {
-            Desktop.getDesktop().browse(URI.create("https://github.com/tomast1337/controle-de-loja-em-java"));
+            Desktop.getDesktop().browse(URI.create(URL));
         } catch (IOException ex) {
             Logger.getLogger(JFrameSobre.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    private void jButtonProjetoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProjetoActionPerformed
+        abrirLink("https://github.com/tomast1337/controle-de-loja-em-java");
     }//GEN-LAST:event_jButtonProjetoActionPerformed
 
     private void jButtonGit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGit1ActionPerformed
-        try {
-            Desktop.getDesktop().browse(URI.create("https://github.com/tomast1337/"));
-        } catch (IOException ex) {
-            Logger.getLogger(JFrameSobre.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        abrirLink("https://github.com/tomast1337/");
     }//GEN-LAST:event_jButtonGit1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
