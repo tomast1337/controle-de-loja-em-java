@@ -41,7 +41,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItemProduto = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem = new javax.swing.JMenuItem();
+        jMenuVenda = new javax.swing.JMenuItem();
         jMenuSobre = new javax.swing.JMenu();
         jMenuItemSobre = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
@@ -111,15 +111,30 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuCadastro.setText("Cadastrar");
 
         jMenuItemCliente.setText("Cliente");
+        jMenuItemCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemClienteActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItemCliente);
         jMenuCadastro.add(jSeparator1);
 
         jMenuItemProduto.setText("Produto");
+        jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProdutoActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItemProduto);
         jMenuCadastro.add(jSeparator2);
 
-        jMenuItem.setText("jMenuItem3");
-        jMenuCadastro.add(jMenuItem);
+        jMenuVenda.setText("Venda");
+        jMenuVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuVendaActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuVenda);
 
         jMenu.add(jMenuCadastro);
 
@@ -163,6 +178,24 @@ public class JFramePrincipal extends javax.swing.JFrame {
         sobre.setVisible(true);
     }//GEN-LAST:event_jMenuItemSobreActionPerformed
 
+    private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
+        System.out.println("Abrindo form Cliente");
+        JFrameCliente cliente = new JFrameCliente();
+        cliente.setVisible(true);
+    }//GEN-LAST:event_jMenuItemClienteActionPerformed
+
+    private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
+        System.out.println("Abrindo form Produto");
+        JFrameProduto produto = new JFrameProduto();
+        produto.setVisible(true);
+    }//GEN-LAST:event_jMenuItemProdutoActionPerformed
+
+    private void jMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuVendaActionPerformed
+        System.out.println("Abrindo form Venda");
+        JFrameVenda venda = new JFrameVenda();
+        venda.setVisible(true);
+    }//GEN-LAST:event_jMenuVendaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -205,13 +238,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenu;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenuCadastro;
-    private javax.swing.JMenuItem jMenuItem;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemProduto;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenu jMenuSobre;
+    private javax.swing.JMenuItem jMenuVenda;
     private javax.swing.JPanel jPanelEstatisticas;
-    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
