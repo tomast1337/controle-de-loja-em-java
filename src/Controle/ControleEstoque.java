@@ -9,9 +9,9 @@ import java.util.List;
 
 /**
  *
- * @author tomast1337
+ * @author Nicolas Vycas Nery
  */
-public class ControleProduto implements ControleBasico{
+public class ControleEstoque implements ControleBasico{
 
     @Override
     public boolean setManipular(Object o, char tarefa) {

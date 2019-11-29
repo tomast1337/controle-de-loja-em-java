@@ -5,14 +5,15 @@
  */
 package Controle;
 
+import Persistencia.DaoBasico;
 import java.util.List;
 
 /**
  *
- * @author tomast1337
+ * @author Nicolas Vycas Nery
  */
-public class ControleProduto implements ControleBasico{
-
+public class ControleVenda implements ControleBasico{
+    DaoBasico dV;
     @Override
     public boolean setManipular(Object o, char tarefa) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
