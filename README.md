@@ -4,9 +4,8 @@ Uma melhoria do meu projeto final do ensino médio do qual tenho mt vergonha de 
 ------------
 ###### Características do projeto
 - Cadastro de **Clientes**
-- Cadastro de **Vendas**
-- Cadastro de **Produtos**
-- Cadastro do **Estoque** de **Produtos**
+- Cadastro de **Vendas** e **Produtos** envolvidos
+- Cadastro de **Produtos** e **Estoque** dos mesmos
 ------------
 ###### Utilizado no projeto
 - NetBeans 8.0.2
@@ -14,6 +13,6 @@ Uma melhoria do meu projeto final do ensino médio do qual tenho mt vergonha de 
 - MySql
 - Astah Community
 ------------
-[![Paz](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")
-
+[![SQL](https://github.com/tomast1337/controle-de-loja-em-java/blob/master/MYSQL/DiagramMySQL.png?raw=true "SQL")]
 ------------
+[![Paz](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")
