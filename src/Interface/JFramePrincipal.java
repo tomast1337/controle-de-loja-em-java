@@ -50,7 +50,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         setTitle("Controle Loja");
         setResizable(false);
 
-        jPanelEstatisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estatísticas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 24))); // NOI18N
+        jPanelEstatisticas.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Estatísticas", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("sansserif", 1, 24))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel1.setText("Produtos registrados:");
