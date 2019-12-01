@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author tomast1337
+ * @author Nicolas Vycas Nery
  */
-public class DaoProduto implements DaoBasico{
-    public DaoProduto(){
+public class DaoEstoque implements DaoBasico{
+    public DaoEstoque(){
         String inst = "";
-        System.out.println("Persistencia.DaoProduto.<init>()");
+        System.out.println("Persistencia.DaoEstoque.<init>()");
         try {
             Connection con = DaoConexao.getInstancia().getCon();
             try (PreparedStatement pS = con.prepareStatement(inst)){
