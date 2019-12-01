@@ -12,7 +12,17 @@ import java.util.List;
  */
 public class DaoEstoque implements DaoBasico{
     public DaoEstoque(){
-        String inst = "";
+        String inst = "CREATE TABLE IF NOT EXISTS Estoque (" +
+                      "  idEstoque INT NOT NULL," +
+                      "  Produto_Codigo INT NOT NULL," +
+                      "  Quantidade INT NULL," +
+                      "  PRIMARY KEY (idEstoque, Produto_Codigo)," +
+                      "  INDEX fk_Estoque_Produto1_idx (Produto_Codigo ASC)," +
+                      "  CONSTRAINT fk_Estoque_Produto1" +
+                      "    FOREIGN KEY (Produto_Codigo)" +
+                      "    REFERENCES mydb.Produto (Codigo)" +
+                      "    ON DELETE NO ACTION" +
+                      "    ON UPDATE NO ACTION);";
         System.out.println("Persistencia.DaoEstoque.<init>()");
         try {
             Connection con = DaoConexao.getInstancia().getCon();

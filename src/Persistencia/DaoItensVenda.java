@@ -12,7 +12,23 @@ import java.util.List;
  */
 public class DaoItensVenda implements DaoBasico{
     public DaoItensVenda(){
-        String inst = "";
+        String inst = "CREATE TABLE IF NOT EXISTS ItensVenda (" +
+                      "  Venda_Numero INT NOT NULL," +
+                      "  Produto_Codigo INT NOT NULL," +
+                      "  Quantidade INT NULL," +
+                      "  PRIMARY KEY (Venda_Numero, Produto_Codigo)," +
+                      "  INDEX fk_Venda_has_Produto_Produto1_idx (Produto_Codigo ASC)," +
+                      "  INDEX fk_Venda_has_Produto_Venda1_idx (Venda_Numero ASC)," +
+                      "  CONSTRAINT fk_Venda_has_Produto_Venda1" +
+                      "    FOREIGN KEY (Venda_Numero)" +
+                      "    REFERENCES mydb.Venda (Numero)" +
+                      "    ON DELETE NO ACTION" +
+                      "    ON UPDATE NO ACTION," +
+                      "  CONSTRAINT fk_Venda_has_Produto_Produto1" +
+                      "    FOREIGN KEY (Produto_Codigo)" +
+                      "    REFERENCES mydb.Produto (Codigo)" +
+                      "    ON DELETE NO ACTION" +
+                      "    ON UPDATE NO ACTION);";
         System.out.println("Persistencia.DaoItensVenda.<init>()");
         try {
             Connection con = DaoConexao.getInstancia().getCon();

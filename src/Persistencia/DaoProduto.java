@@ -12,7 +12,14 @@ import java.util.List;
  */
 public class DaoProduto implements DaoBasico{
     public DaoProduto(){
-        String inst = "";
+        String inst = "CREATE TABLE IF NOT EXISTS Produto (" +
+                      "  Codigo INT NOT NULL," +
+                      "  Nome VARCHAR(45) NULL," +
+                      "  Tipo VARCHAR(45) NULL," +
+                      "  Descricao VARCHAR(200) NULL," +
+                      "  Preco INT NULL," +
+                      "  PRIMARY KEY (Codigo))" +
+                      "ENGINE = InnoDB;";
         System.out.println("Persistencia.DaoProduto.<init>()");
         try {
             Connection con = DaoConexao.getInstancia().getCon();

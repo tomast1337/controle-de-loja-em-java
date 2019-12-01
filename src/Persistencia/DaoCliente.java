@@ -12,7 +12,12 @@ import java.util.List;
  */
 public class DaoCliente implements DaoBasico{
     public DaoCliente(){
-        String inst = "";
+        String inst = "CREATE TABLE IF NOT EXISTS Cliente (\n" +
+                      "  Codigo INT NOT NULL,\n" +
+                      "  Nome VARCHAR(45) NOT NULL,\n" +
+                      "  Telefone VARCHAR(12) NULL,\n" +
+                      "  Celular VARCHAR(13) NULL,\n" +
+                      "  PRIMARY KEY (Codigo));";
         System.out.println("Persistencia.DaoCliente.<init>()");
         try {
             Connection con = DaoConexao.getInstancia().getCon();

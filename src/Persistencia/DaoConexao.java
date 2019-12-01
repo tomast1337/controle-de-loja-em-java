@@ -18,9 +18,9 @@ public class DaoConexao {
     private DaoConexao() {
         this.con = null;
         this.servidor = "localhost";
-        this.bD = "DBlojaroupa";
-        this.usuario = "usuario";
-        this.senha = "usuario";
+        this.bD = "DBControleLoja";
+        this.usuario = "root";
+        this.senha = "";
         final String Driver = "com.mysql.jdbc.Driver";
         String url;
         url = "jdbc:mysql://" + servidor + '/' + bD;
