@@ -4,7 +4,9 @@ package Persistencia;
  * @author Nicolas Vycas Nery
  */
 import Util.Diversos;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DaoConexao {
 
