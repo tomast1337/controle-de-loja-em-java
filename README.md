@@ -15,4 +15,4 @@ Uma melhoria do meu projeto final do ensino médio do qual tenho mt vergonha de 
 ------------
 [![SQL](https://github.com/tomast1337/controle-de-loja-em-java/blob/master/MYSQL/DiagramMySQL.png?raw=true "SQL")]
 ------------
-[![Paz](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")](https://images.freeimages.com/images/large-previews/ddb/corn-field-2-1368926.jpg "Paz")
+
